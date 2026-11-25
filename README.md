@@ -19,6 +19,8 @@ The framework is designed for active AI collaborators—not just assistants that
 
 ```text
 motion-graphics-ai-framework/
+├── .gitattributes
+├── .gitignore
 ├── AGENTS.md
 ├── LICENSE
 ├── README.md
@@ -48,6 +50,7 @@ motion-graphics-ai-framework/
 │   │   ├── README.md
 │   │   ├── cases.md
 │   │   ├── scorecard.md
+│   │   ├── independent-review-brief.md
 │   │   ├── review-log.md
 │   │   ├── scripts/count-extensions.sh
 │   │   └── results/
@@ -61,9 +64,9 @@ motion-graphics-ai-framework/
 │   │   ├── cases.md
 │   │   ├── scorecard.md
 │   │   └── results/
-│   │       ├── MP-01/{prompt.md,response.md,evaluation.md}
+│   │       ├── MP-01/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
 │   │       ├── MP-02/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
-│   │       └── MP-03/{prompt.md,response.md,evaluation.md}
+│   │       └── MP-03/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
 │   └── self-review/
 │       ├── README.md
 │       ├── cases.md

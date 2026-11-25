@@ -146,7 +146,7 @@ The project-understanding evaluation pack originally had four scenarios. A fifth
 5. Finish the PU-05 inventory-helper hardening and archive its test results; then complete formal regression scoring for PU-01 through PU-05.
 6. Build equivalent task benchmarks for Alight Motion and After Effects. Compare creative outcomes and acceptance criteria while allowing application-specific implementation.
 7. Verify application capabilities and compatibility per app version and execution method. Label untested claims as unverified.
-8. Decide the open project matters before public release: repository owner/name, open-source license, exact Agent Skills specification version, supported app versions, initial agent compatibility matrix, and contribution/release process.
+8. Decide the open project matters before public release: repository owner/name, open-source license, exact Agent Skills specification version, supported app versions, initial agent compatibility matrix, and contribution/release process. **Update 2026-11-24:** the license is decided (MIT) and the canonical repository and branch are settled (standalone repository, branch `main`, no remote yet) — the remaining items are the hosting account/URL, the Agent Skills specification version, supported app versions, the compatibility matrix, and the contribution/release process.
 
 ## 9. Open / not-yet-verified items
 

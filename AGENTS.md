@@ -80,9 +80,9 @@ motion-graphics-ai-framework/
 │   │   ├── cases.md
 │   │   ├── scorecard.md
 │   │   └── results/
-│   │       ├── MP-01/{prompt.md,response.md,evaluation.md}
+│   │       ├── MP-01/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
 │   │       ├── MP-02/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
-│   │       └── MP-03/{prompt.md,response.md,evaluation.md}
+│   │       └── MP-03/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
 │   └── self-review/
 │       ├── README.md
 │       ├── cases.md
