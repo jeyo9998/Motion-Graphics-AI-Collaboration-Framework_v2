@@ -4,7 +4,7 @@ Status matrix for skill evaluation. A run applies only to the tested client, mod
 
 | Pack | Cases | Status |
 |---|---|---|
-| [`project-understanding/`](project-understanding/README.md) | PU-01 – PU-05 | Rev. B (2026-11-24 runs): PU-01 **88/100 pass**; PU-02 **85/100 pass**; PU-03 **90/100 pass — the owner's score, governs** (reviewer A 83, reviewer B 90); PU-04 **80/100 pass — the owner's score, governs** (reviewer A 83, reviewer B 87, same-model limitation on both); PU-05 **94/100 pass**. Rev. A scores 86/80/86 remain in the same records |
+| [`project-understanding/`](project-understanding/README.md) | PU-01 – PU-05 | Rev. B (2026-11-24 runs): PU-01 **88/100 pass**; PU-02 **85/100 pass**; PU-03 **90/100 pass — the owner's score, governs** (reviewer A 83, reviewer B 90); PU-04 **80/100 pass — the owner's score, governs** (reviewer A 83, reviewer B 87, same-model limitation on both); PU-05 **94/100 pass**. Rev. A scores 86/80/86 remain in the same records; PU-03 and PU-04 were additionally re-run at rev. C in `retest-2026-11-24-revC.md` (89 and 88, reviewer A) |
 | [`motion-graphics-principles/`](motion-graphics-principles/README.md) | MP-01 – MP-03 | MP-01 **95/100 pass**; MP-02 **84/100 pass** at rev. A → **90/100 pass** at rev. B; MP-03 **93/100 pass** |
 | `application-adaptation/` | — | Planned; no pack yet |
 | `motion-graphics-execution/` | — | Planned; no pack yet |

@@ -4,7 +4,7 @@ An open-source project to help compatible AI agents understand, plan, execute, a
 
 The framework is designed for active AI collaborators—not just assistants that explain workflows. Agents should take useful initiative, work within the tools and permissions actually available, respect each application's own logic, and verify outcomes instead of claiming success without evidence.
 
-> **Project status:** Early development. All seven initial Skills now have draft files. Two have behavioral run records: `project-understanding` (all five cases scored: PU-01 88/100, PU-02 85/100, PU-03 90/100 by the project owner — the governing human score, with reviewer A at 83 and reviewer B at 90 recorded alongside — PU-04 80/100 by the project owner — the governing human score, with reviewer A at 83 and reviewer B at 87 recorded alongside — and PU-05 94/100) and `motion-graphics-principles` (MP-01 95/100, MP-02 90/100, MP-03 93/100). Owner-supplied Alight Motion and After Effects fixtures now live in `evals/fixtures/` under read-only rules. Application procedures, execution integrations, and cross-agent compatibility remain unverified.
+> **Project status:** Early development. All seven initial Skills now have draft files. Two have behavioral run records: `project-understanding` (all five cases scored: PU-01 88/100, PU-02 85/100, PU-03 90/100 by the project owner — the governing human score, with reviewer A at 83 and reviewer B at 90 recorded alongside — PU-04 80/100 by the project owner — the governing human score, with reviewer A at 83 and reviewer B at 87 recorded alongside — and PU-05 94/100). PU-03 and PU-04 have also been re-run against rev. C, each recorded in its own `retest-2026-11-24-revC.md` beside the preserved original response (PU-03 89/100, PU-04 88/100, reviewer A, no critical failure). `motion-graphics-principles` (MP-01 95/100, MP-02 90/100, MP-03 93/100). Owner-supplied Alight Motion and After Effects fixtures now live in `evals/fixtures/` under read-only rules. Application procedures, execution integrations, and cross-agent compatibility remain unverified.
 
 ## Goals
 
@@ -56,8 +56,8 @@ motion-graphics-ai-framework/
 │   │   └── results/
 │   │       ├── PU-01/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
 │   │       ├── PU-02/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
-│   │       ├── PU-03/{prompt.md,response.md,evaluation.md}
-│   │       ├── PU-04/{prompt.md,response.md,evaluation.md}
+│   │       ├── PU-03/{prompt.md,response.md,evaluation.md,retest-2026-11-24-revC.md}
+│   │       ├── PU-04/{prompt.md,response.md,evaluation.md,retest-2026-11-24-revC.md}
 │   │       └── PU-05/{prompt.md,response.md,evaluation.md,retest-2026-11-24.md}
 │   ├── motion-graphics-principles/
 │   │   ├── README.md

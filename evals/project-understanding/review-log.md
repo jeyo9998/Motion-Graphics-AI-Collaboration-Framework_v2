@@ -423,3 +423,64 @@ Decision, recorded in `SKILL-ARCHITECTURE.md` §14–15 and `AGENTS.md` §3:
 ### Documentation synchronized
 
 Owner PU-03 score 90 propagated to `results/PU-03/evaluation.md` (with an owner-review section), `evals/README.md`, `evals/project-understanding/README.md`, `README.md`, `AGENTS.md` §3, `SKILL-ARCHITECTURE.md` §14, and the self-review assessment. The historical entries in this log and in the self-review addenda are kept unchanged as the audit trail.
+
+## Review 010 — rev. C behavioural runs for PU-03 and PU-04
+
+**Date:** 2026-11-24
+**Decision:** Execute PU-03 and PU-04 again under the rev. C skill, preserve each response verbatim in a separate `retest-` file that does not overwrite the re-tested response, verify every checkable claim independently against the fixture bytes and the extracted frames, and record the results without altering the earlier rev. B records.
+
+### Runs
+
+Both cases were run on 2026-11-24 under the standard protocol: fresh agent context, the skill read from the repository path, `evals/` withheld as the answer key, the exact prompt from `cases.md` with no coaching and no follow-up.
+
+| Case | rev. B (reviewer A) | rev. C (reviewer A) | Critical failure | Where |
+|---|---:|---:|---|---|
+| PU-03 | 83 | **89** | No | `evals/project-understanding/results/PU-03/retest-2026-11-24-revC.md` |
+| PU-04 | 83 | **88** | No | `evals/project-understanding/results/PU-04/retest-2026-11-24-revC.md` |
+
+The rev. C rules did what they were written to do: PU-03's rev. B response contained two claims the reviewer could not reproduce, and in rev. C the byte- and frame-level citations are dense enough that the reviewer could re-derive the answer independently. PU-04's response gained a full per-property offset table and timestamped recording values.
+
+### One discarded attempt, recorded
+
+The first rev. C launch for PU-03 was discarded before it produced a record: the prompt had been paraphrased and carried coaching bullets, which breaks the protocol in `cases.md` ("Do not rewrite these prompts when running the official evaluation"). Neither the prompt nor the response of that attempt was preserved, and the discard is now stated verbatim in the PU-03 rev. C record under *Protocol note — one discarded attempt*.
+
+### PU-03 rev. C — reviewer verification
+
+All 26 checkable claims were re-derived from the fixture bytes. Reproduced: every Alight Motion attribute and element count, all 12 derived frame times, the exact CSS cubic-bezier table, the After Effects big-endian doubles at their offsets, and the chunk census. Two defects found:
+
+| Claim in the response | Finding |
+|---|---|
+| The influence-like fractions `0.333333 = 1/3` etc. are cited under `movement_1.aep` | Those values occur 0 times in `movement_1.aep` and 73× / 255× in `movement_2.aep` — the file attribution is wrong |
+| `Shape Layer 1 Scale (100 %, 100 %, 100 %) → (0 %, 0 %, 100 %)` | Does not reproduce from the bytes of either `.aep` |
+
+### PU-04 rev. C — reviewer verification
+
+35 claims were re-derived from the `.aep` bytes, the XML and the extracted recording frames. Reproduced exactly: the `RIFX` / `Egg!` header, every `cdat` value at its cited offset, the `ldat` keyframes at `t=0.166667` and `t=0.7` with their derived frames 5 and 21, the camera layer's `0x44` flag byte, the absence of any stored point-of-interest value, every Alight Motion header and attribute, all element counts, and the recording values at 00:00:35 / 00:00:40 / 00:00:52 and 03:20. Three defects found:
+
+| Claim in the response | Finding |
+|---|---|
+| `SUB-1` item chunk @63506, size 134,838, holding a 17-layer list | The `LIST` at 63506 has size **135,094**; the `Item` id sits at 63514; the item holds **12** named layer entries, not 17 |
+| Zoom ratio `3420.7 / 2666.6666666666665` = `1.2831` | The quotient is **1.28276** — the figure holds to three decimals, not four |
+| Headline "the After Effects camera … is a Two-Node Camera" | The type was never read from AE's own control. The body labels it **Inferred**, names the closing screenshot, and the inference rests on Adobe's documented point-of-interest signature plus an observed property row. Recorded as a borderline presentation risk for the owner to rule on, **not** as a critical failure |
+
+The run also consulted external vendor and community documentation on its own initiative. The Adobe quotation it relies on was confirmed by the reviewer, but the agent's direct fetch of that page returned HTTP 403 and the wording reached it through the search result rather than the page — disclosed in the record.
+
+### Scores after this review
+
+| Case | Owner | Reviewer A (rev. C) | Reviewer B | Governing |
+|---|---:|---:|---:|---|
+| PU-03 | **90** | 89 | 90 | 90 (owner) |
+| PU-04 | **80** | 88 | 87 | 80 (owner) |
+
+The governing PU pack mean is unchanged at **87,4/100** — the owner scores were set against rev. B and have not been re-issued for rev. C. The rev. C reviewer scores are recorded alongside them with the SR-05 same-model limitation.
+
+### Documentation synchronized
+
+`README.md`, `AGENTS.md` §3, `evals/README.md`, `evals/project-understanding/README.md` and the self-review assessment were updated to list the two new `retest-2026-11-24-revC.md` files and the rev. C scores. The historical entries in this log and in the self-review addenda are kept unchanged as the audit trail.
+
+### Remaining limitations
+
+- SR-05 remains open: every reviewer score in this repository was produced by the same model family as the skill author, so the second-reviewer requirement is only satisfied for the owner's two human scores.
+- The owner has not re-scored PU-03 or PU-04 against rev. C; the 90 and 80 remain the governing figures for those cases.
+- Recordings were examined as frame sets, not played back; audio was never examined in any recording.
+- PU-04's rev. C headline/borderline call is recorded rather than resolved; the owner may rule it a critical failure, which would change that record's outcome.

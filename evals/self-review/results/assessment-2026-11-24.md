@@ -171,6 +171,24 @@ Batas yang tetap: rekaman layar diperiksa sebagai bingkai ekstrak (bukan pemutar
   - Konsekuensi yang dicatat: label rev. A/B/C tetap dipakai sebagai label bukti evaluasi, dan sekarang bisa dipasangkan dengan hash commit.
 - **Uji run rev. C untuk PU-03 dan PU-04 sedang berjalan** pada `skills/project-understanding/SKILL.md` rev. C, dengan konteks baru dan kunci jawaban ditutup. Hasilnya dicatat pada addendum terpisah ketika selesai.
 
+### Addendum (Review 010) — uji run rev. C untuk PU-03 dan PU-04 selesai
+
+-Kedua kasus PU-03 dan PU-04 sudah dijalankan ulang pada skill rev. C dengan konteks agen baru, kunci jawaban (`evals/`) ditutup, prompt verbatim dari `cases.md`, tanpa coaching dan tanpa pertanyaan lanjutan. Hasil reviewer A: **PU-03 89/100**, **PU-04 88/100** — keduanya di band Pass, tanpa critical failure. Respons verbatim disimpan di berkas terpisah `retest-2026-11-24-revC.md`; berkas `response.md` yang diuji ulang tidak ditimpa.
+
+- **Satu percobaan dibuang dan dicatat apa adanya.** Luncuran rev. C pertama untuk PU-03 dibuang sebelum menghasilkan record: prompt-nya diparafrase dan membawa bullet coaching, yang melanggar protokol di `cases.md` ("Do not rewrite these prompts when running the official evaluation"). Prompt dan respons percobaan itu tidak dipertahankan, dan pembuangan tersebut ditulis verbatim di bagian *Protocol note — one discarded attempt* pada record PU-03 rev. C. Saya tidak menyajikan ini sebagai run yang pernah terjadi.
+
+- **PU-03 rev. C — verifikasi 26 klaim.** Semua nilai Alight Motion, 12 waktu frame turunan, tabel CSS cubic-bezier, double big-endian After Effects beserta offsetnya, dan sensus chunk bereproduksi. Dua cacat ditemukan: (1) daftar pecahan influence-like `0.333333 = 1/3` yang dikutip sebagai `movement_1.aep` ternyata 0 kali muncul di berkas itu dan 73×/255× muncul di `movement_2.aep` — atribusi berkasnya salah; (2) tripel "Shape Layer 1 Scale (100 %, 100 %, 100 %) → (0 %, 0 %, 100 %)" tidak bereproduksi dari byte kedua `.aep`.
+
+- **PU-04 rev. C — verifikasi 35 klaim.** Header `RIFX`/`Egg!`, seluruh nilai `cdat` pada offset yang dikutip, keyframe `ldat` pada `t=0.166667` dan `t=0.7` beserta frame turunan 5 dan 21, byte flag `0x44` pada layer kamera, ketiadaan nilai point-of-interest yang tersimpan, seluruh header/atribut/hitungan XML Alight Motion, dan nilai rekaman pada 00:00:35 / 00:00:40 / 00:00:52 serta 03:20 semuanya bereproduksi persis. Tiga cacat ditemukan: (1) "item chunk @63506, size 134,838, berisi 17 layer" — ukuran sebenarnya **135.094**, id `Item` ada di 63514, dan isinya **12** entri layer bernama; (2) rasio Zoom `1.2831` sebenarnya **1.28276**, jadi hanya sah tiga desimal; (3) judul jawaban menyebut kamera "is a Two-Node Camera" padahal tipe tidak pernah dibaca dari kontrol AE sendiri.
+
+- **Penilaian batas (borderline) pada PU-04 — saya serahkan ke owner.** Tubuh jawaban menandai tipe sebagai **Inferred**, menyebut screenshot penutup yang dibutuhkan, dan penalarannya bertumpu pada kalimat terdokumentasi Adobe (kamera two-node adalah yang punya point of interest) plus baris properti yang benar-benar terlihat di rekaman — jadi bagi saya ini **bukan** critical failure, melainkan risiko penyajian. Deskripsi lengkapnya ada di record PU-04 rev. C agar owner bisa memutuskan lebih ketat tanpa perlu menerima penilaian saya apa adanya.
+
+- **Sumber eksternal dipakai agen tanpa prompting.** Jalur penalaran dua-node sebagian bertumpu pada dokumentasi vendor dan komunitas (Adobe Help, Frame.io, School of Motion, Creative COW). Kutipan Adobe saya verifikasi ulang lewat pencarian, tetapi pengambilan halaman Adobe oleh agen sendiri mengembalikan HTTP 403 sehingga kalimat itu masuk lewat cuplikan hasil pencarian, bukan halaman — hal ini dikualifikasi di record, bukan disembunyikan.
+
+- **Rata-rata pack tidak berubah: 87,4/100.** Skor owner (PU-03 90, PU-04 80) ditetapkan terhadap rev. B dan belum diterbitkan ulang untuk rev. C; skor reviewer rev. C dicatat berdampingan dengan keterbatasan SR-05.
+
+- **SR-05 tetap terbuka.** Semua skor reviewer di repositori ini berasal dari satu keluarga model yang sama dengan penulis skill. Brief untuk reviewer model kedua tetap tersedia di `evals/project-understanding/independent-review-brief.md`.
+
 ## Aggregate dan keputusan
 
 - Rata-rata pack **88,0/100**, lima dari enam kasus lulus, **satu kasus gagal: SR-05 (78)**.
