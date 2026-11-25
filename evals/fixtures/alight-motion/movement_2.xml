@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?><!--
+Created by Alight Motion (http://alightmotion.com)
+Exported: 2026-11-22 12:18 AM
+5.0.273.1028425 (1028425)
+2d5c0f8 (20 Mei 2026 04.16.19)
+-->
+<scene title="Proyek Baru 95" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="2090" fps="120" modifiedTime="1795281513428" amver="1028425" ffver="106" am="com.alightcreative.motion/5.0.273.1028425" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+  <bookmark t="1420" />
+  <shape id="300071275" label="Persegi Panjang Bulat 1" startTime="0" endTime="2090" fillType="color" mediaFillMode="fill" parent="300071276" s=".roundrect">
+    <transform>
+      <location>
+        <kf t="0.958852" v="773.965210,0.000000,0.000000" e="cubicBezier 0.42 0.0 0.0 1.0" />
+        <kf t="0.001914" v="-726.712280,0.000000,0.000000" />
+      </location>
+      <rotation>
+        <kf t="0.001914" v="-0.058411" />
+        <kf t="0.958852" v="359.941589" e="cubicBezier 0.42 0.0 0.0 1.0" />
+      </rotation>
+    </transform>
+    <fillColor value="#ff464dfe" />
+    <path-stroke direction="centered" end-size="1.500000">
+      <color value="#ffffffff" />
+      <size value="12.500000" />
+    </path-stroke>
+    <property name="size" type="vec2" value="100.000000,100.000000" />
+    <property name="cornerRadius" type="float">
+      <kf t="0.001914" v="0.000000" />
+      <kf t="0.958852" v="180.000000" e="cubicBezier 0.42 0.0 0.0 1.0" />
+    </property>
+  </shape>
+  <nullobj id="300071276" label="Nol 1" startTime="708" endTime="2090" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <rotation>
+        <kf t="0.002894" v="0.000000" />
+        <kf t="0.606368" v="180.000000" e="cubicBezier 1.0 0.0 0.26067954 1.0" />
+      </rotation>
+    </transform>
+  </nullobj>
+</scene>

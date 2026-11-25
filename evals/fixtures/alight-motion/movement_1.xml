@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?><!--
+Created by Alight Motion (http://alightmotion.com)
+Exported: 2026-11-22 12:12 AM
+5.0.273.1028425 (1028425)
+2d5c0f8 (20 Mei 2026 04.16.19)
+-->
+<scene title="Proyek Baru 94" width="1920" height="1080" exportWidth="1920" exportHeight="1080" precompose="dynamicResolution" bgcolor="#ff000000" totalTime="3448" fps="120" modifiedTime="1795281169564" amver="1028425" ffver="106" am="com.alightcreative.motion/5.0.273.1028425" amplatform="android" retime="freeze" retimeAdaptFPS="false">
+  <bookmark t="2337" />
+  <bookmark t="2170" />
+  <shape id="300071272" label="Persegi Panjang Bulat 1" startTime="0" endTime="2007" fillType="color" mediaFillMode="fill" parent="300071273" s=".roundrect">
+    <transform>
+      <location>
+        <kf t="0.051819" v="0.000000,0.000000,0.000000" />
+        <kf t="0.624813" v="795.378052,0.000000,0.000000" e="cubicBezier 0.86685157 0.0 0.43377253 1.0" />
+      </location>
+    </transform>
+    <fillColor value="#ff4a82b9" />
+    <property name="size" type="vec2" value="100.000000,100.000000" />
+    <property name="cornerRadius" type="float" value="25.000000" />
+  </shape>
+  <nullobj id="300071273" label="Nol 1" startTime="291" endTime="2448" mediaFillMode="fill" type="perspective">
+    <transform>
+      <location value="960.000000,540.000000,0.000000" />
+      <scale>
+        <kf t="0.001854" v="1.000000,1.000000" />
+        <kf t="0.484933" v="0.000000,0.000000" e="cubicBezier 0.42 0.0 0.58 1.0" />
+      </scale>
+      <rotation>
+        <kf t="0.001854" v="0.000000" />
+        <kf t="0.484933" v="360.000000" e="cubicBezier 1.0 0.0 0.26 1.0" />
+      </rotation>
+    </transform>
+  </nullobj>
+  <shape id="300071274" label="Lingkaran 1" startTime="1441" endTime="3448" fillType="color" mediaFillMode="fill" s=".circle">
+    <transform>
+      <location>
+        <kf t="0.131041" v="960.000000,540.000000,0.000000" />
+        <kf t="0.986049" v="960.000000,540.000000,0.000000" e="cubicBezier 1.0 0.0 0.2806518 1.0" />
+        <kf t="0.695566" v="960.000000,997.349976,0.000000" e="cubicBezier 0.39646322 0.0 0.37052703 1.0" />
+        <kf t="0.446437" v="960.000000,78.812500,0.000000" e="cubicBezier 1.0 0.0 0.360541 1.0" />
+      </location>
+      <scale>
+        <kf t="0.167912" v="1.000000,1.000000" e="cubicBezier 1.0 0.0 0.27399445 1.0" />
+        <kf t="0.001993" v="0.000000,0.000000" />
+      </scale>
+    </transform>
+    <property name="size" type="vec2">
+      <kf t="0.131041" v="100.000000,100.000000" />
+      <kf t="0.363229" v="76.000000,100.000000" e="cubicBezier 1.0 0.0 0.36 1.0" />
+      <kf t="0.446437" v="100.000000,76.000000" e="cubicBezier 0.0 0.0 0.0 1.0" />
+      <kf t="0.986049" v="100.000000,100.000000" e="cubicBezier 1.0 0.0 0.0 1.0" />
+      <kf t="0.612357" v="76.000000,100.000000" e="cubicBezier 0.0 0.0 0.19410539 1.0" />
+      <kf t="0.695566" v="100.000000,76.000000" e="cubicBezier 0.27330098 0.0 0.0 1.0" />
+      <kf t="0.903338" v="76.000000,100.000000" e="cubicBezier 0.28626907 0.0 0.0 1.0" />
+    </property>
+  </shape>
+</scene>

@@ -1,0 +1,8 @@
+# Normalize text files to LF in the repository and in the working tree.
+* text=auto eol=lf
+
+# Application project files are binary and must never be line-ending normalized.
+*.aep binary
+*.mp4 binary
+*.png binary
+*.jpg binary
