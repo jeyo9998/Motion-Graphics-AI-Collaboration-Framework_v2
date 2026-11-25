@@ -436,7 +436,7 @@ Both cases were run on 2026-11-24 under the standard protocol: fresh agent conte
 | Case | rev. B (reviewer A) | rev. C (reviewer A) | Critical failure | Where |
 |---|---:|---:|---|---|
 | PU-03 | 83 | **89** | No | `evals/project-understanding/results/PU-03/retest-2026-11-24-revC.md` |
-| PU-04 | 83 | **88** | No | `evals/project-understanding/results/PU-04/retest-2026-11-24-revC.md` |
+| PU-04 | 83 | **88** | **Yes — ruled by the project owner on 2026-11-24** | `evals/project-understanding/results/PU-04/retest-2026-11-24-revC.md` |
 
 The rev. C rules did what they were written to do: PU-03's rev. B response contained two claims the reviewer could not reproduce, and in rev. C the byte- and frame-level citations are dense enough that the reviewer could re-derive the answer independently. PU-04's response gained a full per-property offset table and timestamped recording values.
 
@@ -461,18 +461,28 @@ All 26 checkable claims were re-derived from the fixture bytes. Reproduced: ever
 |---|---|
 | `SUB-1` item chunk @63506, size 134,838, holding a 17-layer list | The `LIST` at 63506 has size **135,094**; the `Item` id sits at 63514; the item holds **12** named layer entries, not 17 |
 | Zoom ratio `3420.7 / 2666.6666666666665` = `1.2831` | The quotient is **1.28276** — the figure holds to three decimals, not four |
-| Headline "the After Effects camera … is a Two-Node Camera" | The type was never read from AE's own control. The body labels it **Inferred**, names the closing screenshot, and the inference rests on Adobe's documented point-of-interest signature plus an observed property row. Recorded as a borderline presentation risk for the owner to rule on, **not** as a critical failure |
+| Headline "the After Effects camera … is a Two-Node Camera" | The type was never read from AE's own control. The body labels it **Inferred**, names the closing screenshot, and the inference rests on Adobe's documented point-of-interest signature plus an observed property row. Reviewer A judged this a borderline presentation risk rather than a critical failure; **the project owner overruled that on 2026-11-24 and ruled it a critical failure** — see below |
 
 The run also consulted external vendor and community documentation on its own initiative. The Adobe quotation it relies on was confirmed by the reviewer, but the agent's direct fetch of that page returned HTTP 403 and the wording reached it through the search result rather than the page — disclosed in the record.
+
+### Owner ruling — PU-04 rev. C is a critical failure (2026-11-24)
+
+The project owner reviewed the borderline call and **ruled that the PU-04 rev. C response triggers a critical failure**. The criterion: the case's own critical-failure example *"Claims One-Node or Two-Node as confirmed without the type field or equivalent reliable evidence"*, and the scorecard's *"Presents assumptions or unsupported technical interpretations as confirmed facts"*. The response's headline declares the camera Two-Node while the type was never read from AE's own control.
+
+Consequences, applied as the scorecard states:
+
+- **PU-04 fails at rev. C**, regardless of the 88 weighted points, which remain on record as reviewer A's dimensional assessment. The 80–89 "Pass" band does not apply.
+- A retest is required after a skill revision that fixes the failure mode.
+- Reviewer A's contrary judgement is preserved in the record, in full, because the revision and any re-test need to know which reading was rejected.
 
 ### Scores after this review
 
 | Case | Owner | Reviewer A (rev. C) | Reviewer B | Governing |
 |---|---:|---:|---:|---|
 | PU-03 | **90** | 89 | 90 | 90 (owner) |
-| PU-04 | **80** | 88 | 87 | 80 (owner) |
+| PU-04 | **80** (rev. B) | 88 weighted points — **fail on critical failure** | 87 | 80 (owner, rev. B) |
 
-The governing PU pack mean is unchanged at **87,4/100** — the owner scores were set against rev. B and have not been re-issued for rev. C. The rev. C reviewer scores are recorded alongside them with the SR-05 same-model limitation.
+The governing PU pack mean stays at **87,4/100** — the owner scores were set against rev. B and have not been re-issued for rev. C, and the owner's instruction is that any re-scoring is reconciled against the initial assessment rather than substituted for it. The rev. C reviewer scores are recorded alongside them.
 
 ### Documentation synchronized
 
@@ -480,7 +490,7 @@ The governing PU pack mean is unchanged at **87,4/100** — the owner scores wer
 
 ### Remaining limitations
 
-- SR-05 remains open: every reviewer score in this repository was produced by the same model family as the skill author, so the second-reviewer requirement is only satisfied for the owner's two human scores.
+- SR-05's threshold failure was already closed **by owner decision** on 2026-11-24 (the owner acted as the human reviewer); what remained open was the technical enforcement of answer-key separation, the reporting of model names, and a per-dimension human re-score. An independent review by a different model family was commissioned on 2026-11-24 to address the first of those and is recorded in Review 011.
 - The owner has not re-scored PU-03 or PU-04 against rev. C; the 90 and 80 remain the governing figures for those cases.
 - Recordings were examined as frame sets, not played back; audio was never examined in any recording.
-- PU-04's rev. C headline/borderline call is recorded rather than resolved; the owner may rule it a critical failure, which would change that record's outcome.
+- PU-04 at rev. C is a **failed** case pending a skill revision and a re-test. The revision needed is narrow: a conclusion whose certainty exceeds the evidence must be stated as an inference in the headline itself, not only in the body.

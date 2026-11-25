@@ -6,8 +6,8 @@
 - **Skill revision:** working copy of `skills/project-understanding/SKILL.md` at **rev. C** — the 2026-11-24 edits recorded in Review 008 (Technical evidence discipline: derived values show their derivation, binary values cite chunk/offset, generalizations scoped to what was inspected, changing recording values cite a frame timestamp). 231 lines; the revision is also identifiable as commit `9fff40c`. The rev. B record (owner 80/100 — governing; reviewer A 83/100; reviewer B 87/100) is the evidence for rev. B.
 - **Materials supplied:** the owner-supplied Alight Motion XML camera sample (`evals/fixtures/alight-motion/Motion_Graphics_unik.xml`), the owner-supplied After Effects camera AEP (`evals/fixtures/after-effects/Motion_Graphics_Unik_Camera.aep`), and the three screen recordings kept outside the repository at `D:/Download/rekam kamera`.
 - **Procedure:** fresh agent context; the skill was read from the repository path; the agent was told not to open `cases.md`, `scorecard.md`, `review-log.md`, `independent-review-brief.md`, `evals/fixtures/README.md` or any `results/` folder; it was told to disregard any score arriving with its working context; the exact prompt below was submitted; no coaching and no follow-up occurred. The agent chose on its own to consult external vendor and community documentation; the source list is preserved in the response.
-- **Score:** **88 / 100** (rev. B: 80/100 owner — governing / 83 reviewer A / 87 reviewer B)
-- **Critical failure:** **No** — see the critical-failure review below, which records one borderline judgement for the project owner to overrule if they read it differently.
+- **Score:** **88 / 100 weighted points, but the case FAILS** — the project owner ruled a critical failure on 2026-11-24 (see *Critical failure review*). (rev. B: 80/100 owner — governing / 83 reviewer A / 87 reviewer B)
+- **Critical failure:** **Yes — ruled by the project owner on 2026-11-24.** Criterion: *"Presents assumptions or unsupported technical interpretations as confirmed facts"* / the case's own example *"Claims One-Node or Two-Node as confirmed without the type field or equivalent reliable evidence."* The response's headline states the camera "is a Two-Node Camera" although the type was never read from AE's own control. Reviewer A's own judgement was the opposite (recorded below in full); the owner is the decider and overruled it.
 
 ## User prompt
 
@@ -240,7 +240,7 @@ Every checkable claim was re-derived independently from the fixture bytes, the r
 | Application awareness | 5 | 10 | 10 | The structural difference is identified from the files themselves — AM is a single-node perspective camera with degree-based FOV whose motion lives in a parent-null rig, AE is a camera layer with Position/Orientation and a DoF option set — and the rules forbid unifying them or moving rig conventions between applications. |
 | Handoff quality | 3 | 10 | 6 | The output is directly useful for the two adapters and the open-items table is actionable, but no skill routing is given: `application-adaptation` is never named as the recipient of the per-application procedure lists that §3 and §4 already write out, and `motion-graphics-principles` / `execution` are not considered. |
 | Proportionality | 4 | 5 | 4 | Long for a single question — six sections, two large property tables and a nine-item source list — but the case explicitly asked for a documentation review of two applications, so most of the length is on-topic. Deducted for the internal-structure detail (chunk inventories) that the user's adapter documentation does not need. |
-| **Total** | | **100** | **88** | Pass (80–89). |
+| **Total** | | **100** | **88** | Weighted points 88 (Pass band 80–89), but the case **fails**: the project owner ruled a critical failure on 2026-11-24, which is an automatic fail regardless of the numerical score. |
 
 ## Expected behavior checklist
 
@@ -251,11 +251,27 @@ Every checkable claim was re-derived independently from the fixture bytes, the r
 - [x] Avoid presenting parser-derived AEP details as official format documentation — the parser is labelled unofficial in §1, §3.1 and §3.4.
 - [x] Keep application-specific references separate — separate AE and AM sections, separate do-not-document lists, and an explicit cross-application rule section.
 
+The checklist records what the response actually did, item by item. It is not the pass/fail decision: the owner ruled a critical failure on 2026-11-24 because the headline contradicted item 3's own content — the body says the type is inferred and unread, the first line declares it as a confirmed fact. A response can satisfy every item and still fail the case on how it presents its conclusion.
+
 ## Critical failure review
 
 The case defines three critical-failure examples. Each was checked.
 
-1. **"Claims One-Node or Two-Node as confirmed without the type field or equivalent reliable evidence."** — This is the closest call in the evaluation and the reviewer's reasoning is recorded in full. The response's opening line says the camera "is a Two-Node Camera". The type was, however, never read from AE's own control, and the response says so in three separate places: §2 caveat 1 ("inferred from a property row, not read from AE's explicit control"), §3.3 ("no type field … appeared in any sampled frame") and §6 (status **Inferred**, not Confirmed, with the closing screenshot named). The evidence it relies on — a `Point of Interest` row in the camera layer's Transform group, observed at 00:00:35/00:00:40 and again at 03:20 with a different value, plus Adobe's documented statement that a two-node camera is the one that has a point of interest — is *equivalent reliable evidence* rather than an assumption, and the reviewer confirmed both the row and the quotation independently. **Judgement: no critical failure**, because the response separates the inference from the fact and names what would confirm it. The reviewer records the borderline nature explicitly so the project owner can rule differently; a stricter reading of the phrase "as confirmed" would treat the declarative headline as the failure.
+### Owner ruling — 2026-11-24: critical failure confirmed, case FAILS
+
+The project owner reviewed this borderline call and **ruled that it is a critical failure**. The response's headline states the After Effects camera "is a Two-Node Camera", and the type was never read from After Effects' own type control — the case's critical-failure example for this item is *"Claims One-Node or Two-Node as confirmed without the type field or equivalent reliable evidence."* The owner is the decider here, and the reviewer's contrary judgement below is recorded as history, not as the outcome.
+
+Consequences, applied as the scorecard states:
+
+- The case **fails**, regardless of the numerical score. The 88 weighted points from the dimension table remain on record as the reviewer's dimensional assessment; they do not rescue the case.
+- The 80–89 "Pass" band does not apply. The outcome recorded for PU-04 at rev. C is **fail — critical failure**.
+- A retest is required after the skill revision that addresses the failure.
+
+Reviewer A's reasoning is preserved below in full, because a re-test and any future revision need to know exactly which reading was rejected — and because this reviewer may be asked to re-score after the fix.
+
+### Reviewer A's assessment (recorded 2026-11-24, before the owner ruling)
+
+1. **"Claims One-Node or Two-Node as confirmed without the type field or equivalent reliable evidence."** — This was the closest call in the evaluation and the reviewer's reasoning is recorded in full. The response's opening line says the camera "is a Two-Node Camera". The type was, however, never read from AE's own control, and the response says so in three separate places: §2 caveat 1 ("inferred from a property row, not read from AE's explicit control"), §3.3 ("no type field … appeared in any sampled frame") and §6 (status **Inferred**, not Confirmed, with the closing screenshot named). The evidence it relies on — a `Point of Interest` row in the camera layer's Transform group, observed at 00:00:35/00:00:40 and again at 03:20 with a different value, plus Adobe's documented statement that a two-node camera is the one that has a point of interest — is *equivalent reliable evidence* rather than an assumption, and the reviewer confirmed both the row and the quotation independently. **Reviewer A's judgement was: no critical failure**, on the ground that the response separates the inference from the fact and names what would confirm it. **The project owner overruled this on 2026-11-24 and ruled it a critical failure** — see the ruling above.
 2. **"Claims Depth of Field is active when the supplied recording shows it unchecked."** — Not present. The response states Depth of Field is unchecked, and the AEP's `ADBE Camera Depth of Field` = 0 independently agrees. No critical failure.
 3. **"Treats Custom 3D Views as Camera Layers."** — Not present. The response never uses the phrase "Custom 3D Views"; the recording's `Custom View 3` is a viewer preset name, and the response reports it only as part of the viewer state without classifying it as a layer. No critical failure.
 
@@ -271,5 +287,6 @@ No other critical-failure condition was met: no claim to have opened or rendered
 
 ## Retest
 
-- Not required for the pass threshold. This run supersedes the rev. B record for PU-04 at the current skill revision; the earlier record and its [`response.md`](response.md) remain in place as the evidence for rev. B.
-- The project owner's score for rev. C has not been given yet. The owner's rev. B score (80/100) remains the governing human score for PU-04 until they score this revision.
+- **Required.** The project owner ruled a critical failure on 2026-11-24, so PU-04 does not pass at rev. C. The skill needs a revision that removes the failure mode — a conclusion whose certainty exceeds the evidence must be stated as an inference in the headline itself, not only in the body — and the case must then be run again as a new revision record.
+- This run supersedes the rev. B record for PU-04 at the current skill revision; the earlier record and its [`response.md`](response.md) remain in place as the evidence for rev. B.
+- The owner's rev. B score (80/100) remains the governing human score for PU-04 until they score this revision. Any further independent score is added, not substituted, and the owner reconciles it against that initial assessment.

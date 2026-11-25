@@ -76,6 +76,8 @@ When you inspect project files, recordings, or binary/exported formats and repor
 - **Cite where each value came from.** For binary formats, name the chunk, offset, or property block; for text formats, name the element and attribute. Recurring values (common doubles, round times) are not identifiable without that reference.
 - **Scope every generalization to what you inspected.** "In the elements inspected" is honest; "in this format" is not, unless the check covered the whole file or format. State any counterexample you already saw instead of generalizing past it.
 - **Cite a specific frame per changing value.** When a recording shows values changing over time, give the timestamp at which each value was read; do not report a transient or mid-edit state as a settled value.
+- **Match the claim's certainty to its evidence, in the headline as well as the body.** A conclusion you inferred rather than read directly must be labelled as an inference where the answer is stated — the first line, the summary, and the direct answer. A caveat placed further down does not cancel a confident opening sentence, and the opening is what a reader acts on.
+- **Do not answer a direct question with a stronger claim than the evidence allows.** When the decisive control, field, or value was never read, say what the evidence is consistent with, say plainly that the deciding item was not read, and name the one input that would settle it. Asking for that input is part of the answer, not an optional extra.
 
 ### 2. Identify the intended outcome
 

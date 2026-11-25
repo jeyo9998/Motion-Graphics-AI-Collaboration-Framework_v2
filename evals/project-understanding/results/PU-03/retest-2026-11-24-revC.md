@@ -6,7 +6,7 @@
 - **Skill revision:** working copy of `skills/project-understanding/SKILL.md` at **rev. C** — the 2026-11-24 edits recorded in Review 008 (Technical evidence discipline: derived values show their derivation, binary values cite chunk/offset, generalizations scoped to what was inspected, changing recording values cite a frame timestamp). 231 lines; no version field in the file; the revision is also identifiable as commit `9fff40c`. The 83/100 (reviewer A), 90/100 (reviewer B) and **90/100 (project owner, governing)** records cover rev. B.
 - **Materials supplied:** the four movement fixtures only — `alight-motion/movement_1.xml`, `alight-motion/movement_2.xml`, `after-effects/movement_1.aep`, `after-effects/movement_2.aep`
 - **Procedure:** fresh agent context; the skill was read from the repository path; the agent was told not to open `cases.md`, `scorecard.md`, `review-log.md`, `independent-review-brief.md`, `evals/fixtures/README.md` or any `results/` folder; it was told to disregard any score arriving with its working context; the exact prompt below was submitted; no coaching and no follow-up occurred.
-- **Score:** **89 / 100** (previous revision: 90/100 owner / 90 reviewer B / 83 reviewer A)
+- **Score:** **89 / 100** (previous revision: **90/100 owner — governing** / 90 reviewer B / 83 reviewer A). The owner's 90 was set against rev. B and is unchanged; this rev. C number is reviewer A's dimensional assessment, added alongside it, not substituted for it.
 - **Critical failure:** **No**
 
 ### Protocol note — one discarded attempt
@@ -313,3 +313,5 @@ Every checkable claim was re-derived independently from the fixture bytes and fi
 ## Retest
 
 - Not required for the pass threshold. This run supersedes the rev. B record for PU-03 at the current skill revision; the earlier record and its [`response.md`](response.md) remain in place as the evidence for rev. B.
+- The project owner's score for rev. C has not been given. The owner's rev. B score (**90/100 — governing**) remains the human score for PU-03 until they score this revision.
+- Any further independent score for this response is **added, not substituted**. The owner reconciles it against the initial assessment; no governing score changes automatically.
