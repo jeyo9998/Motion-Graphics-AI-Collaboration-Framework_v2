@@ -222,10 +222,11 @@ The project uses an incremental method: complete and review a stage before movin
 - Development method: incremental.
 - Workflow values: Simple, Structured, Evaluated, Improved.
 - License: MIT (selected 2026-11-24), covering the framework's original work; owner-supplied fixtures and external recordings excluded.
+- Canonical repository and branch (2026-11-24): the framework root is a standalone Git repository on branch `main` (first commit `9fff40c`). No remote is configured; the hosting URL and owner are still to be supplied, and publishing requires explicit authorisation.
 
 ## 16. Open decisions
 
-- Final repository name and GitHub owner.
+- Hosting URL and owner account for the canonical repository (the repository itself and its default branch are settled).
 - Initial target versions of Alight Motion and After Effects for testing.
 - Which AI clients will be included in the first compatibility test matrix.
 - Specific application integrations and execution tools.

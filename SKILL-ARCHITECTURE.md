@@ -397,9 +397,9 @@ Status as of the 2026-11-24 continuation pass and the later evaluation pass reco
 |---|---:|---|
 | Project specification | Yes | Working draft; see `PROJECT-SPECIFICATION.md`. |
 | Repository contribution guide | Yes | `AGENTS.md` contains source-of-truth, workflow, safety, and reporting rules. |
-| `project-understanding` | Yes | Draft, at **rev. C** (technical-evidence-discipline rules added after the PU-03/PU-04 runs). Rev. B runs: PU-01 88/100, PU-02 85/100, PU-03 83/100, PU-05 94/100; PU-04 **80/100 (project owner's independent score, governs; reviewer A 83, reviewer B 87, same-model limitation on both)**. Rev. A scored 86/80/86 on PU-01/02/05. |
+| `project-understanding` | Yes | Draft, at **rev. C** (technical-evidence-discipline rules added after the PU-03/PU-04 runs). Rev. B runs: PU-01 88/100, PU-02 85/100, PU-03 **90/100 (project owner's independent score, governs; reviewer A 83, reviewer B 90, same-model limitation on both)**, PU-05 94/100; PU-04 **80/100 (project owner's independent score, governs; reviewer A 83, reviewer B 87)**. Rev. A scored 86/80/86 on PU-01/02/05. |
 | `project-understanding` evaluation pack | Yes | Five scenarios, weighted scorecard, per-case result folders, and rev. B retest records. |
-| `motion-graphics-principles` | Yes | Draft. Rev. A runs: MP-01 95/100, MP-02 84/100, MP-03 93/100; MP-02 re-run at rev. B scored 90/100. MP-01/MP-03 not re-run after the revision. |
+| `motion-graphics-principles` | Yes | Draft, at **rev. B**. Rev. A runs: MP-01 95/100, MP-02 84/100, MP-03 93/100. Re-runs at rev. B: MP-02 90/100, MP-01 95/100, MP-03 93/100 — all three cases now have rev. B evidence. |
 | `motion-graphics-principles` evaluation pack | Yes | Three scenarios, weighted scorecard, per-case result folders. |
 | `application-adaptation` | Yes | Draft; reference scaffolding only. No verified application procedures recorded. |
 | `motion-graphics-execution` | Yes | Draft; not tested. |
@@ -410,6 +410,7 @@ Status as of the 2026-11-24 continuation pass and the later evaluation pass reco
 | Application adapters/integrations | No | No runnable Alight Motion or After Effects integration is established. |
 | Cross-agent orchestration | No | Handoff is specified conceptually; runtime orchestration is not implemented. |
 | Public open-source license | Yes | **MIT**, selected by the project owner on 2026-11-24 (`LICENSE`). Covers the framework's original work; owner fixtures and external recordings excluded. |
+| Canonical Git repository | Yes | Standalone repository at the framework root, default branch `main`, initial commit `9fff40c` (2026-11-24). No remote configured — publishing requires the owner's repository URL and explicit authorisation. See Section 15. |
 
 The seven draft Skills were authorized in one pass by the project owner. Structural presence does not satisfy the per-Skill behavioral evaluation gates described in Section 13.
 
@@ -430,12 +431,13 @@ Do not resolve these through assumptions. Record a decision when the user or pro
 - **Evaluation client for the first runs:** Qoder background agents in fresh contexts, model selected automatically by the client. This is a test condition, not a compatibility commitment.
 - **Canonical scoring:** the repository's weighted 0–5 dimension scorecard (100 points) with a per-case threshold of 80 and no critical failure. The external 0–4/20 aggregate scheme is not adopted.
 - **Drafting scope:** the owner authorized drafting all seven Skills in one pass. Skills 02–07 remain without behavioral evaluation and must not be described as validated.
-- **Blocked cases:** PU-03 and PU-04 were recorded as blocked rather than simulated while their fixtures were absent. Owner-supplied projects are now stored in `evals/fixtures/`, and both cases ran at rev. B on 2026-11-24 and were scored by the owner and by two agent reviewers (PU-03 83/90; PU-04 80 owner, 83, 87). Availability of fixtures is not a score; the runs were executed only after the last fixture arrived.
-- **Revision labelling:** because the repository has no commits, edited skills are tracked as **rev. A** (the revision a run was scored against) and **rev. B** (the revision edited from that evidence). A score never transfers between revisions, and a re-run is recorded in a separate `retest-<date>.md` so the earlier response stays intact.
+- **Blocked cases:** PU-03 and PU-04 were recorded as blocked rather than simulated while their fixtures were absent. Owner-supplied projects are now stored in `evals/fixtures/`, and both cases ran at rev. B on 2026-11-24 and were scored by the owner and by two agent reviewers (PU-03 90 owner, 83, 90; PU-04 80 owner, 83, 87). Availability of fixtures is not a score; the runs were executed only after the last fixture arrived.
+- **Revision labelling:** evaluation records label the skill revision they were scored against (**rev. A**, **rev. B**, **rev. C**). Since 2026-11-24 the repository also has commits, so a revision label can be paired with a commit hash; a score never transfers between revisions, and a re-run is recorded in a separate `retest-<date>.md` so the earlier response stays intact.
 - **Evidence-driven edits made on 2026-11-24:** `project-understanding` rev. B adds an inventory-source rule, a response-size rule, a next-step boundary, and a three-item cap in Example 2; `motion-graphics-principles` rev. B adds a three-area cap for no-material cases, a no-invented-precision rule for easing numbers, and a ban on asserting application behavior.
 - **License decided (2026-11-24):** MIT, selected by the project owner. Scope covers the framework's original work; owner-supplied fixtures and screen recordings are excluded.
 - **Revision C (2026-11-24):** `project-understanding` rev. C adds a "Technical evidence discipline" block to workflow step 1 — derived values show their derivation, binary values cite chunk/offset, generalizations are scoped to what was inspected, and changing recording values cite a frame timestamp. Driven by the PU-04 run findings.
-- **Still open:** canonical GitHub repository/branch, target application versions, first compatibility matrix, and integration tooling.
+- **Canonical repository and branch (2026-11-24):** decided by the agent under the owner's delegation to "work it out from your understanding of the repository". *Canonical repository* means the one authoritative place where this framework lives and is edited — as opposed to the archival handoff ZIP and any stray copy. *Canonical branch* means the default branch of that repository, the line every change lands on. Decision: the framework root is now a **standalone Git repository** (it was previously inside an unrelated repository in the home directory), default branch **`main`**, first commit `9fff40c`, no remote configured. The remote name `origin` is reserved for the owner's own hosting; adding it and publishing require the owner's URL and explicit authorisation, because publishing is externally visible. The current working copy inside the handoff package is the canonical working tree; relocating it to a stable path outside `Downloads/` is possible later but is a move of the owner's files and stays an owner decision.
+- **Still open:** the remote hosting URL for the canonical repository, target application versions, first compatibility matrix, and integration tooling.
 
 ---
 

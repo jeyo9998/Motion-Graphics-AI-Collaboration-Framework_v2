@@ -35,6 +35,8 @@ Do not assume that a file exists because it is mentioned in a roadmap or earlier
 
 ```text
 motion-graphics-ai-framework/
+├── .gitattributes
+├── .gitignore
 ├── AGENTS.md
 ├── LICENSE
 ├── README.md
@@ -96,15 +98,16 @@ motion-graphics-ai-framework/
 Current status in this repository:
 
 - All seven initial Skills have draft `SKILL.md` files; this is not behavioral validation.
-- `project-understanding` has run records for all five cases at the current skill revision: PU-01 88/100, PU-02 85/100, PU-03 83/100, PU-05 94/100, and PU-04 **80/100 — the project owner's independent score, which governs** (reviewer A 83, reviewer B 87; both agent scores carry the same-model limitation recorded in the evaluations). Rev. A scored 86/80/86 on PU-01/02/05. The skill is at **rev. C**: a "Technical evidence discipline" block in workflow step 1 (derived values show their derivation, binary values cite chunk/offset, generalizations are scoped to what was inspected, changing recording values cite a frame timestamp).
-- `motion-graphics-principles` has run records: MP-01 95/100, MP-02 90/100 after a re-run (84/100 before the revision), MP-03 93/100.
+- `project-understanding` has run records for all five cases at the current skill revision: PU-01 88/100, PU-02 85/100, PU-03 **90/100 — the project owner's independent score, which governs** (reviewer A 83, reviewer B 90), PU-05 94/100, and PU-04 **80/100 — the project owner's independent score, which governs** (reviewer A 83, reviewer B 87; all agent scores carry the same-model limitation recorded in the evaluations). Rev. A scored 86/80/86 on PU-01/02/05. The skill is at **rev. C**: a "Technical evidence discipline" block in workflow step 1 (derived values show their derivation, binary values cite chunk/offset, generalizations are scoped to what was inspected, changing recording values cite a frame timestamp).
+- `motion-graphics-principles` has run records: MP-01 95/100, MP-02 90/100 after a re-run (84/100 before the revision), MP-03 93/100. All three cases have been re-run against rev. B (MP-01 95/100, MP-02 90/100, MP-03 93/100); each re-run is recorded in its own `retest-2026-11-24.md` beside the preserved original response.
 - `evals/self-review/` holds the 2026-11-24 agent-contribution self-assessment: initial mean 88,0/100, revised to **88,5/100** in the Review 006 addendum (SR-06 re-scored 90 → 93). **SR-05 (evaluation validity) still fails at 78/100** because the same agent wrote the skills, ran the tests, and scored them. Independent re-scoring is outstanding.
-- Application fixtures supplied by the owner on 2026-11-24 now live in `evals/fixtures/` — three Alight Motion XML exports (`com.alightcreative.motion/5.0.273.1028425`, Android) and four `.aep` files, each recorded with SHA-256 and read-only rules. The originals at `D:/Download/update/XML` and `D:/Download/update/aep` were copied, not moved, and still hash identical. They are the owner's work, not licensed for reuse. The owner's screen recordings are kept outside the repository, referenced by path and hash. PU-03 ran at rev. B on the in-repo fixtures (83/100 reviewer A, 90/100 reviewer B); PU-04 ran at rev. B on the fixtures plus the recordings (80/100 owner — governing, 83/100 reviewer A, 87/100 reviewer B).
+- Application fixtures supplied by the owner on 2026-11-24 now live in `evals/fixtures/` — three Alight Motion XML exports (`com.alightcreative.motion/5.0.273.1028425`, Android) and four `.aep` files, each recorded with SHA-256 and read-only rules. The originals at `D:/Download/update/XML` and `D:/Download/update/aep` were copied, not moved, and still hash identical. They are the owner's work, not licensed for reuse. The owner's screen recordings are kept outside the repository, referenced by path and hash. PU-03 ran at rev. B on the in-repo fixtures (90/100 owner — governing, 83/100 reviewer A, 90/100 reviewer B); PU-04 ran at rev. B on the fixtures plus the recordings (80/100 owner — governing, 83/100 reviewer A, 87/100 reviewer B).
 - `application-adaptation` contains reference scaffolding only; no verified application procedures are recorded.
 - The current validator checks basic Skill directory and frontmatter conventions. It does not prove that an agent discovers, activates, or follows a Skill correctly.
 - No application integration or execution adapter is established merely by the presence of documentation.
 - Alight Motion and After Effects execution, round-trip file modification, rendering, and cross-agent compatibility require separate practical tests.
 - The project owner selected **MIT** as the public license on 2026-11-24; `LICENSE` is in place. It covers the framework's original work (Skills, documentation, evaluation packs, test code). The owner's application projects under `evals/fixtures/` and the screen recordings remain **outside** that grant.
+- **Canonical repository:** this directory is a standalone Git repository on branch **`main`** (first commit `9fff40c`, 2026-11-24). It is the single authoritative place where the framework is edited; the handoff ZIP and the rest of the handoff package are archives, not the source of truth. No remote is configured — the remote name `origin` is reserved for the owner's hosting, and adding or pushing to it requires the owner's URL and explicit authorisation.
 
 Update this section when the repository structure or implementation status changes.
 

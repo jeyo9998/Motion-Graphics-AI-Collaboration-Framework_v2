@@ -5,8 +5,14 @@
 - **AI client / model:** Qoder CLI, `general-purpose` subagent, fresh context. Model name not reported by the client; the session model tier was owner-set to "Efficient".
 - **Skill revision:** rev. B of `skills/project-understanding/SKILL.md`
 - **Input materials:** `movement_1.xml`, `movement_2.xml`, `movement_1.aep`, `movement_2.aep` from [`../../../fixtures/`](../../../fixtures/README.md)
-- **Score:** **83/100 — pass** (reviewer A, revised 2026-11-24 after independent review B) · reviewer B **90/100 — pass** · project owner: not scored yet
+- **Score:** **90/100 — pass (project owner's independent human score — governing)** · reviewer A **83/100 — pass** (revised 2026-11-24) · reviewer B **90/100 — pass** (independent agent context)
 - **Critical failure:** **None**
+
+## Owner review (2026-11-24)
+
+The project owner scored this run **90/100 for success** and confirmed the case was completed successfully. This is the owner's independent human score and it governs; the two agent reviewers' scores are recorded below with the SR-05 limitation (the same agent family wrote the skill, ran the case, and scored it). The owner gave a total rather than a per-dimension breakdown, so no owner dimension table exists; reviewer A's dimension profile stands as the agent-side breakdown.
+
+The owner score of 90 is two points above reviewer B's 90 and seven above reviewer A's 83. The seven-point gap against reviewer A is fully explained by the defects reviewer A confirmed against the fixture bytes — the `adfr` frame-rate attribution, the enumerated view list, "Null 43" presented as a comp layer, the absent `0.2` fraction, and the AE Roundness unit. None of those is a critical failure, but each was stated as inventory fact in the response, which is what reviewer A's Evidence-discipline and Application-boundary deductions measure.
 
 ## Status history
 
@@ -74,7 +80,7 @@ Reviewer B's findings that differ from reviewer A's: it also found the `adfr` mi
 
 ### Revision of the reviewer-A score (2026-11-24)
 
-The three additional defects found by reviewer B were not in reviewer A's first pass, so the reviewer-A score is revised from **89 to 83**: Evidence discipline 4→3 (16→12) and Application boundary 5→4 (10→8). Both reviewers land the case as a pass. The run's response file is untouched; only the review record changed.
+The three additional defects found by reviewer B were not in reviewer A's first pass, so the reviewer-A score is revised from **89 to 83**: Evidence discipline 4→3 (16→12) and Application boundary 5→4 (10→8). Both reviewers land the case as a pass, and the project owner independently scored the same run **90/100 — pass**, which governs. The run's response file is untouched; only the review record changed.
 
 ## What this run demonstrates
 

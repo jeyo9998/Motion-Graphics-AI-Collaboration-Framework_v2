@@ -82,7 +82,7 @@ Penilai: agen yang sama yang mengerjakan kontinuitas repository. Skor memakai [`
 
 1. Skor ulang seluruh record oleh reviewer independen — model kedua atau manusia — memakai `scorecard.md` yang sama.
 2. Pisahkan kunci jawaban dari agen pelaksana secara teknis (direktori staging berisi hanya skill + materi kasus, bukan repository penuh).
-3. Jalankan ulang MP-01 dan MP-03 pada rev. B.
+3. Jalankan ulang MP-01 dan MP-03 pada rev. B. **→ Terjawab 2026-11-24 (Addendum Review 009): keduanya dijalankan ulang dan dinilai, MP-01 95/100 dan MP-03 93/100.**
 4. Catat nama model yang sebenarnya; laporan saat ini hanya menyebut "dipilih otomatis oleh klien", sehingga tidak bisa direplikasi.
 
 ## SR-06 — Penanganan fixture aplikasi baru — 90
@@ -133,7 +133,7 @@ Cara pencatatan yang jujur:
 - **Status kasus berubah menjadi: LULUS menurut owner.** Syarat "reviewer independen" pada daftar perbaikan SR-05 dianggap terpenuhi oleh review manusia ini, sehingga kegagalan ambang **ditutup atas keputusan owner**, bukan atas dasar bukti metodologis baru.
 - Yang **masih terbuka** dan tidak ikut tertutup oleh keputusan tersebut:
   1. Pemisahan answer-key belum ditegakkan secara teknis — pada run PU-03/PU-04 (Review 007) pemisahan dilakukan dengan instruksi "jangan baca `evals/`", yang bersifat nasihat, bukan paksaan.
-  2. MP-01 dan MP-03 masih skor rev. A; belum dijalankan ulang di rev. B.
+  2. MP-01 dan MP-03 masih skor rev. A; belum dijalankan ulang di rev. B. **→ Tertutup 2026-11-24 (Addendum Review 009): MP-01 95/100, MP-03 93/100 pada rev. B.**
   3. Nama model sebenarnya tetap tidak dilaporkan klien; yang tercatat hanya tier sesi "Efficient".
   4. Re-scoring per dimensi oleh reviewer manusia belum dilakukan; owner memberi vonis, bukan angka.
 
@@ -159,6 +159,17 @@ Batas yang tetap: rekaman layar diperiksa sebagai bingkai ekstrak (bukan pemutar
 - **Rev. C** diterapkan: blok "Technical evidence discipline" pada `skills/project-understanding/SKILL.md` — empat aturan yang lahir dari temuan run PU-04 (nilai turunan menyertakan turunannya, nilai biner menyebut offset, generalisasi dibatasi pada yang diperiksa, nilai rekaman yang berubah menyebut timestamp).
 - **Lisensi MIT** dipilih owner dan `LICENSE` dibuat; cakupannya hanya karya orisinal framework, fixture dan rekaman owner dikecualikan.
 - **SR-05 tetap terbuka:** reviewer B masih satu keluarga model dengan penulis skill. Brief siap-tempel untuk reviewer model lain (mis. Claude) tersedia di `evals/project-understanding/independent-review-brief.md`.
+
+### Addendum (Review 009) — skor owner PU-03, re-run MP-01/MP-03, dan repo kanonik
+
+- **Owner memberi skor PU-03 = 90/100 (lulus)** dan menyatakan kasus itu berhasil. Skor owner adalah skor manusia independen yang berlaku; reviewer A 83 dan reviewer B 90 dicatat berdampingan dengan keterbatasan SR-05. Rata-rata pack PU dengan skor yang berlaku naik menjadi **87,4/100** (88 + 85 + 90 + 80 + 94, ÷ 5).
+- **Re-run MP-01 dan MP-03 pada rev. B** — dua kasus yang sejak Review 004 belum pernah dijalankan ulang. Keduanya memakai konteks agen baru, prompt verbatim dari `cases.md`, tanpa materi, dan `evals/` ditutup sebagai kunci jawaban. Hasil: **MP-01 95/100** (sebelumnya 95) dan **MP-03 93/100** (sebelumnya 93). Kedua respons disimpan verbatim di `retest-2026-11-24.md` masing-masing; respons lama tidak ditimpa. Berikutnya **seluruh tiga kasus MP punya bukti pada rev. B**, sehingga celah "MP-01/MP-03 belum di-run ulang" yang tercatat di SR-05 item 3 **tertutup**.
+  - MP-01: aturan rev. B ("jangan memberi angka easing tanpa unit/sumber") dipatuhi — strength range tanpa unit dari rev. A hilang. Sisa temuan: toleransi "±5 px" pada acceptance criteria adalah angka yang dikarang dan tidak dilabeli sebagai proposal.
+  - MP-03: cacat "perilaku lintas aplikasi dinyatakan sebagai fakta" dari rev. A hilang; parameter kosmetik kini diringkas ke satu baris "proposed defaults". Sisa temuan: klaim "di bawah perceptual threshold" dan konsekuensi gradient tanpa sumber, serta option tree yang masih panjang.
+  - Catatan jujur: total skor tidak naik. Rev. B memindahkan cacat, bukan menghapus cacat — aturan rev. B tidak otomatis menaikkan skor, dan saya tidak menilai ke atas supaya re-run tampak berhasil.
+- **Repo/branch kanonik diputuskan** atas mandat owner ("kerjakan sendiri dengan pemahamanmu"). Temuan faktanya: folder framework **bukan** repository git sendiri — ia berada di dalam repository direktori home `C:/Users/Axioo` yang tidak punya satu pun commit dan tanpa remote. Keputusan: folder framework menjadi **repository git mandiri**, branch default **`main`**, commit pertama `9fff40c`, 74 file terlacak, `.gitignore` + `.gitattributes` (LF untuk teks, biner tidak dinormalisasi). **Tidak ada remote yang dikonfigurasi** — menambah atau mendorong ke `origin` adalah tindakan yang terlihat di luar dan memerlukan URL milik owner serta izin eksplisit; itu belum diberikan. Repositori home milik owner tidak saya sentuh.
+  - Konsekuensi yang dicatat: label rev. A/B/C tetap dipakai sebagai label bukti evaluasi, dan sekarang bisa dipasangkan dengan hash commit.
+- **Uji run rev. C untuk PU-03 dan PU-04 sedang berjalan** pada `skills/project-understanding/SKILL.md` rev. C, dengan konteks baru dan kunci jawaban ditutup. Hasilnya dicatat pada addendum terpisah ketika selesai.
 
 ## Aggregate dan keputusan
 

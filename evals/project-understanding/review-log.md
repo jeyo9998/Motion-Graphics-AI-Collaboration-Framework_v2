@@ -383,3 +383,43 @@ PU pack mean on governing scores: **86,0/100** (88 + 85 + 83 + 80 + 94, ÷ 5).
 - PU-03 has no owner score yet.
 - Recordings were examined as frame sets, not played back; audio was never examined.
 - The recorded runs predate rev. C, so the new rules are not yet exercised by any recorded run.
+
+## Review 009 — Owner's PU-03 score, MP-01/MP-03 re-runs, and the canonical repository
+
+### Owner's PU-03 score
+
+The project owner scored PU-03 **90/100 — pass**, confirming the case was completed successfully. It is the second human score in the repository and it governs, exactly as PU-04's owner score of 80 governs that case. Reviewer A's 83 and reviewer B's 90 are recorded alongside it with the SR-05 same-model limitation.
+
+PU pack mean on governing scores rises from 86,0 to **87,4/100** (88 + 85 + 90 + 80 + 94, ÷ 5).
+
+### MP-01 and MP-03 re-run against rev. B
+
+Both cases were still scored against rev. A, which left the SR-05 improvement list open. Both were re-run on 2026-11-24 under the standard protocol: fresh agent context, the skill read from the repository path, `evals/` withheld as the answer key, the verbatim prompt from `cases.md`, no materials, no coaching. Each response is preserved verbatim in a new `retest-2026-11-24.md` beside the untouched original response.
+
+| Case | rev. A | rev. B | Critical failure | Where |
+|---|---:|---:|---|---|
+| MP-01 | 95 | **95** | No | `evals/motion-graphics-principles/results/MP-01/retest-2026-11-24.md` |
+| MP-02 | 84 | 90 | No | `evals/motion-graphics-principles/results/MP-02/retest-2026-11-24.md` |
+| MP-03 | 93 | **93** | No | `evals/motion-graphics-principles/results/MP-03/retest-2026-11-24.md` |
+
+The totals did not move, and that is recorded as-is. The rev. B rules removed the specific defects the rev. A reviews had identified — MP-01's unit-less easing strength range and MP-03's cross-application behavioural assertion — but each re-run introduced a smaller replacement defect of its own (MP-01's unlabelled "±5 px" acceptance tolerance; MP-03's unsupported "perceptual threshold" and gradient claims, and an option tree that is still longer than the ask). A rule that moves a defect rather than removing it is not evidence of progress, so no score was inflated to show otherwise. All three MP cases now have rev. B evidence, which closes item 3 of the SR-05 improvement list.
+
+### Canonical repository and branch
+
+The owner asked what "canonical repo/branch" means and delegated the decision. The factual situation found on this machine:
+
+- The framework directory was **not** a Git repository of its own. `git rev-parse --show-toplevel` resolved to `C:/Users/Axioo` — an unrelated repository in the user's home directory, with **zero commits**, no remotes, and permission-denied subdirectories. Any commit made from the framework directory would have gone into that home-directory repository, which is not what the project needs.
+- The owner has other work in that home directory. It was left untouched.
+
+Decision, recorded in `SKILL-ARCHITECTURE.md` §14–15 and `AGENTS.md` §3:
+
+- **Canonical repository:** the framework root is now a standalone Git repository (`git init -b main`), with `.gitignore` (OS/editor noise, Python bytecode, local scratch) and `.gitattributes` (LF for text, `binary` for `.aep`/`.mp4`/images).
+- **Canonical branch:** `main`, the default branch every change lands on.
+- **First commit:** `9fff40c` — 74 tracked files, the reviewed state at rev. C with the MIT license.
+- **Remote:** none configured. The name `origin` is reserved for the owner's own hosting; adding a remote and pushing are externally visible actions that need the owner's repository URL and explicit authorisation, and neither was given. No placeholder URL was invented.
+- **Canonical working copy:** the current path inside the handoff package remains the working tree. Relocating it out of `Downloads/` is a move of the owner's files and stays an owner decision.
+- The revision labels rev. A / rev. B / rev. C remain the evidence labels used in evaluation records and can now be paired with a commit hash.
+
+### Documentation synchronized
+
+Owner PU-03 score 90 propagated to `results/PU-03/evaluation.md` (with an owner-review section), `evals/README.md`, `evals/project-understanding/README.md`, `README.md`, `AGENTS.md` §3, `SKILL-ARCHITECTURE.md` §14, and the self-review assessment. The historical entries in this log and in the self-review addenda are kept unchanged as the audit trail.

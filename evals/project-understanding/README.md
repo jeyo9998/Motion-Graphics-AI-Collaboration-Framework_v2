@@ -1,6 +1,6 @@
 # Project Understanding — Evaluation Pack
 
-**Status:** At skill **rev. B** (2026-11-24 runs): PU-01 **88/100 pass**, PU-02 **85/100 pass**, PU-03 **83/100 pass** (reviewer A, revised after an independent re-review that scored 90), PU-04 **80/100 pass — the project owner's independent score, which governs** (reviewer A 83, reviewer B 87; both agent scores carry the same-model limitation), PU-05 **94/100 pass**. At rev. A the PU-01/02/05 cases scored 86/80/86; those records are preserved. Results apply only to the recorded client/conditions; no native application execution was tested.
+**Status:** At skill **rev. B** (2026-11-24 runs): PU-01 **88/100 pass**, PU-02 **85/100 pass**, PU-03 **90/100 pass — the project owner's independent score, which governs** (reviewer A 83, reviewer B 90), PU-04 **80/100 pass — the project owner's independent score, which governs** (reviewer A 83, reviewer B 87; both agent scores carry the same-model limitation), PU-05 **94/100 pass**. At rev. A the PU-01/02/05 cases scored 86/80/86; those records are preserved. Results apply only to the recorded client/conditions; no native application execution was tested.
 
 This pack tests whether `skills/project-understanding/SKILL.md` can convert user requests and available project evidence into reliable, proportionate briefs and handoffs.
 
